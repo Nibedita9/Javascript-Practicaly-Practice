@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-container">
+        <h3>OTP Generator</h3>
+        <button class="generateButton" id="generateButton">
+          OTP Generator
+        </button>
+        <p id="OTP" class="otp"></p>
+      </div>
+    </div>
+
+    <script>
+      let generateButton = document.getElementById("generateButton");
+      let OTP = document.getElementById("OTP");
+
+      generateButton.addEventListener("click", () => {
+        const randomNumber = Math.floor(100000+Math.random() * 900000);
+        // console.log(randomNumber);
+       OTP.innerHTML = ` ${randomNumber}`;
+      });
+    </script>
+  </body>
+</html>
